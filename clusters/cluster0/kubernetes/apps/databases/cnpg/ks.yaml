@@ -53,7 +53,6 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: cnpg-secrets
-  targetNamespace: cnpg-system
   path: ./clusters/cluster0/kubernetes/apps/databases/cnpg/secrets
   prune: true
   sourceRef:
