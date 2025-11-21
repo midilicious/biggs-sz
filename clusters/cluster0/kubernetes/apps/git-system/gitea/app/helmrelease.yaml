@@ -456,12 +456,13 @@ spec:
           HOST: cnpg-gitea-rw.cnpg-system.svc.cluster.local
           NAME: gitea
           USER: gitea
-        additionalConfigFromEnvs:
-          - name: GITEA__database__PASSWD
-            valueFrom:
-              secretKeyRef:
-                name: gitea-user-password
-                key: password
+
+      additionalConfigFromEnvs:
+        - name: GITEA__database__PASSWD
+          valueFrom:
+            secretKeyRef:
+              name: gitea-user-password
+              key: password
 
       ## @param gitea.additionalConfigSources Additional configuration from secret or configmap
       additionalConfigSources: []
