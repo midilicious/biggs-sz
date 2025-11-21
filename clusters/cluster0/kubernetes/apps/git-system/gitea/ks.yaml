@@ -5,7 +5,7 @@ metadata:
   name: &app gitea
   namespace: flux-system
 spec:
-  targetNamespace: gitea
+  targetNamespace: git-system
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
