@@ -398,7 +398,7 @@ spec:
         enabled: true
         token:
         serviceMonitor:
-          enabled: true
+          enabled: false
           #  additionalLabels:
           #    prometheus-release: prom1
           interval: ""
