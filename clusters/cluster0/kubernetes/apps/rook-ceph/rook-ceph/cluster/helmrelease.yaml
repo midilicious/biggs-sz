@@ -81,9 +81,9 @@ spec:
           - name: worker-01
             devices:
               - name: /dev/mapper/ubuntu--vg-lvceph
-          - name: worker-05s
+          - name: worker-05
             devices:
-              - name: /dev/mapper/ubuntu--vg-lvceph
+              - name: /dev/vgroot/lvceph
         config:
           osdsPerDevice: "1"
 
