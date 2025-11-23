@@ -15,6 +15,7 @@ spec:
       dataChecksums: true
       secret:
         name: gitea-user-password
+        namespace: git-system
   imageName: ghcr.io/cloudnative-pg/postgresql:18.0
   resources:
     requests:
