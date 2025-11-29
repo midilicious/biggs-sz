@@ -50,7 +50,7 @@ spec:
       volumes:
         - name: jellyfin-config
           persistentVolumeClaim:
-            claimName: jellyfin-config
+            claimName: jellyfin-config-ceph
         - name: jellyfin-cache
           persistentVolumeClaim:
             claimName: jellyfin-cache
