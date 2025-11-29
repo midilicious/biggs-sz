@@ -43,7 +43,7 @@ spec:
       volumes:
       - name: prowlarr-config
         persistentVolumeClaim:
-          claimName: "prowlarr-config-new"
+          claimName: "prowlarr-config-ceph"
   selector:
     matchLabels:
       app: prowlarr
