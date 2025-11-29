@@ -41,7 +41,7 @@ spec:
       volumes:
       - name: ombi-config
         persistentVolumeClaim:
-          claimName: "ombi-config"
+          claimName: "ombi-config-ceph"
   selector:
     matchLabels:
       app: ombi
