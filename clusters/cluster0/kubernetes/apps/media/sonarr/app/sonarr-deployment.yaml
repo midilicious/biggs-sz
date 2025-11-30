@@ -45,7 +45,7 @@ spec:
       volumes:
       - name: sonarr-config
         persistentVolumeClaim:
-          claimName: "sonarr-config"
+          claimName: "sonarr-config-ceph"
       - name: sonarr-media
         persistentVolumeClaim:
           claimName: "media-pvc"
