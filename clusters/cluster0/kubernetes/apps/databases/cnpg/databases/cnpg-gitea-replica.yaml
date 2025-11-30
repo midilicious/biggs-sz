@@ -9,7 +9,6 @@ spec:
   replica:
     enabled: true
     source: cnpg-gitea
-    primary: cnpg-gitea
   bootstrap:
     pg_basebackup:
       source: cnpg-gitea
