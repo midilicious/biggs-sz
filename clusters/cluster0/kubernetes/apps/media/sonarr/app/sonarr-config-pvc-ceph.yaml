@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sonarr-config-ceph
+  namespace: media
+  labels:
+    app: sonarr
+spec:
+  accessModes:
+   - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: ceph-block
+  
