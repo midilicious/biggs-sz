@@ -45,7 +45,7 @@ spec:
       volumes:
       - name: readarr-config
         persistentVolumeClaim:
-          claimName: "readarr-config"
+          claimName: "readarr-config-ceph"
       - name: readarr-media
         persistentVolumeClaim:
           claimName: "media-pvc"
