@@ -33,7 +33,7 @@ spec:
       ##   - myRegistryKeySecretName
       ##
       imagePullSecrets: []
-      storageClass: "" #TODO rook-ceph
+      storageClass: "ceph-block"
       hostAliases: []
       # - ip: 192.168.137.2
       #   hostnames:
@@ -285,11 +285,11 @@ spec:
       create: true
       mount: true
       claimName: gitea-shared-storage
-      size: 10Gi
+      size: 15Gi
       accessModes:
         - ReadWriteOnce
       labels: {}
-      storageClass: #TODO rook-ceph
+      storageClass: "ceph-block"
       subPath:
       volumeName: ""
       annotations:

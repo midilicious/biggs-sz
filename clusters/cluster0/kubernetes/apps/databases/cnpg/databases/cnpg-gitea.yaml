@@ -24,4 +24,5 @@ spec:
       memory: 300Mi
       cpu: 150m
   storage:
-    size: 20Gi
+    size: 15Gi
+    storageClass: ceph-block
