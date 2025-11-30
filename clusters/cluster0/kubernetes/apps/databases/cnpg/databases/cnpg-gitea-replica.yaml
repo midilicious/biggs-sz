@@ -16,7 +16,7 @@ spec:
     - name: cnpg-gitea
       connectionParameters:
         host: cnpg-gitea-rw.cnpg-system.svc
-        user: streaming_replica
+        user: gitea
         dbname: gitea
         sslmode: require
       password:
