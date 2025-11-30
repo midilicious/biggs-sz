@@ -38,8 +38,8 @@ spec:
               memory: 300Mi
               cpu: 150m
             limits:
-              memory: 750Mi
-              cpu: 500m
+              memory: 1250Mi
+              cpu: 1500m
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
