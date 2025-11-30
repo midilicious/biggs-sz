@@ -1,0 +1,36 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: cnpg-gitea-replica
+  namespace: cnpg-system
+spec:
+  description: Read-only replica of cnpg-gitea
+  instances: 1
+  replica:
+    enabled: true
+    source: cnpg-gitea
+    primary: cnpg-gitea
+    self: cnpg-gitea-replica
+  bootstrap:
+    pg_basebackup:
+      source: cnpg-gitea
+  externalClusters:
+    - name: cnpg-gitea
+      connectionParameters:
+        host: cnpg-gitea-rw.cnpg-system.svc
+        user: streaming_replica
+        dbname: gitea
+        sslmode: require
+      password:
+        name: gitea-user-password
+        key: password
+  imageName: ghcr.io/cloudnative-pg/postgresql:18.0
+  resources:
+    requests:
+      memory: 300Mi
+      cpu: 150m
+    limits:
+      memory: 300Mi
+      cpu: 150m
+  storage:
+    size: 20Gi
