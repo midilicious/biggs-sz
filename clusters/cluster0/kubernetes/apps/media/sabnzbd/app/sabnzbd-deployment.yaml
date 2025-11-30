@@ -50,7 +50,7 @@ spec:
       volumes:
         - name: sabnzbd-config
           persistentVolumeClaim:
-            claimName: "sabnzbd-config"
+            claimName: "sabnzbd-config-ceph"
         - name: sabnzbd-media
           persistentVolumeClaim:
             claimName: "media-pvc"
